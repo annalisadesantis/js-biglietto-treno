@@ -9,18 +9,48 @@ var età = parseInt(prompt('Quanti anni hai?'));
 
 console.log(età);
 
-// Calcolo kilometri
 
-var totkm = (kilometri * 0.21);
 
-console.log(totkm);
+// Calcolo kilometri maggiorenne
+
+var prezzo = (kilometri * 0.21);
+
+console.log(prezzo);
+
+
+// Calcolo kilometri minorenne
+
+var prezzomin = prezzo - (prezzo / 100 * 20);
+
+console.log(prezzomin);
+
+
+// Calcolo kilometri over
+
+var prezzoover = prezzo - (prezzo / 100 * 40);
+
+console.log(prezzoover);
+
+
+
+
 
 // Calcolo età
 
-if (età < 18) {
-    console.log("sei minorenne");
-} else if (età >= 18 && età <= 64) {
-    console.log("sei maggiorenne");
+var minorenne = (età < 18);
+
+var maggiorenne = (età >= 18 && età <= 64);
+
+var over = (età >= 65);
+
+
+
+
+
+if (minorenne) {
+    document.getElementById('prezzo').innerHTML = "Hai diritto ad uno sconto del 20% sul tuo biglietto : " + prezzomin + " € ";
+} else if (maggiorenne) {
+    document.getElementById('prezzo').innerHTML = "Il prezzo del tuo biglietto è di : " + prezzo + " € ";
 } else{
-    console.log("sei over");
+    document.getElementById('prezzo').innerHTML = "Hai diritto ad uno sconto del 40% sul tuo biglietto : " + prezzoover + " € ";
 }
