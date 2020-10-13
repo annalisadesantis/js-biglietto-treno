@@ -48,9 +48,9 @@ var over = (età >= 65);
 
 
 if (minorenne) {
-    document.getElementById('prezzo').innerHTML = "Hai diritto ad uno sconto del 20% sul tuo biglietto : " + prezzomin + " € ";
+    document.getElementById('price').innerHTML = "Hai diritto ad uno sconto del 20% sul tuo biglietto : " + prezzomin + " € ";
 } else if (maggiorenne) {
-    document.getElementById('prezzo').innerHTML = "Il prezzo del tuo biglietto è di : " + prezzo + " € ";
+    document.getElementById('price').innerHTML = "Il prezzo del tuo biglietto è di : " + prezzo + " € ";
 } else{
-    document.getElementById('prezzo').innerHTML = "Hai diritto ad uno sconto del 40% sul tuo biglietto : " + prezzoover + " € ";
+    document.getElementById('price').innerHTML = "Hai diritto ad uno sconto del 40% sul tuo biglietto : " + prezzoover + " € ";
 }
